@@ -50,3 +50,13 @@ const instruction5 = new Promise((resolve) => setTimeout(resolve, 500, 'coat bak
 const instruction6 = new Promise((resolve) => setTimeout(resolve, 500, 'roast in the oven for 20 minutes'));
 const instruction7 = new Promise((resolve) => setTimeout(resolve, 500, 'place back in bowl and add salt and pepper'));
 const instruction8 = new Promise((resolve) => setTimeout(resolve, 500, 'enjoy'));
+
+
+Promise.all([instruction1, instruction2, instruction3, instruction4, instruction5, instruction6, instruction7, instruction8])
+  .then((result) =>{
+    console.log(result);
+    document.querySelector("#brusselsSprouts").innerHTML += result.map(item => `<li>${item}</li>`).join('');
+  })
+  .catch((error) => {
+    console.error(error);
+  });
