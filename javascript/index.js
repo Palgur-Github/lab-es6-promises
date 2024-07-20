@@ -32,40 +32,40 @@
 
 // Iteration 2 - using promises
 
-// obtainInstruction('steak', 0)
+ obtainInstruction('steak', 0)
 
-// .then( (step0) => {
-//   document.querySelector("#steak").innerHTML += `<li>${step0}</li>`;
-//   return obtainInstruction('steak', 1); })
+ .then( (step0) => {
+   document.querySelector("#steak").innerHTML += `<li>${step0}</li>`;
+   return obtainInstruction('steak', 1); })
 
-// .then( (step1) => { 
-//   document.querySelector("#steak").innerHTML += `<li>${step1}</li>`;
-//   return obtainInstruction('steak', 2); })
+ .then( (step1) => { 
+   document.querySelector("#steak").innerHTML += `<li>${step1}</li>`;
+   return obtainInstruction('steak', 2); })
 
-// .then( (step2) => { 
-//   document.querySelector("#steak").innerHTML += `<li>${step2}</li>`;
-//   return obtainInstruction('steak', 3); })
+ .then( (step2) => { 
+   document.querySelector("#steak").innerHTML += `<li>${step2}</li>`;
+   return obtainInstruction('steak', 3); })
 
-//  .then( (step3) => { 
-//   document.querySelector("#steak").innerHTML += `<li>${step3}</li>`;
-//   return obtainInstruction('steak', 4); })
+  .then( (step3) => { 
+   document.querySelector("#steak").innerHTML += `<li>${step3}</li>`;
+   return obtainInstruction('steak', 4); })
 
-//  .then( (step4) => {
-//   document.querySelector("#steak").innerHTML += `<li>${step4}</li>`;
-//   return obtainInstruction('steak', 5); })
+  .then( (step4) => {
+   document.querySelector("#steak").innerHTML += `<li>${step4}</li>`;
+   return obtainInstruction('steak', 5); })
 
-//  .then( (step5) => {
-//   document.querySelector("#steak").innerHTML += `<li>${step5}</li>`;
-//   return obtainInstruction('steak', 6); })
+  .then( (step5) => {
+   document.querySelector("#steak").innerHTML += `<li>${step5}</li>`;
+   return obtainInstruction('steak', 6); })
 
-//  .then( (step6) => {
-//   document.querySelector("#steak").innerHTML += `<li>${step6}</li>`;
-//   return obtainInstruction('steak', 7);})
+  .then( (step6) => {
+   document.querySelector("#steak").innerHTML += `<li>${step6}</li>`;
+   return obtainInstruction('steak', 7);})
 
-//  .then( (step7) => {
-//   document.querySelector("#steak").innerHTML += `<li>${"The steak is ready! "}</li>`})
+  .then( (step7) => {
+   document.querySelector("#steak").innerHTML += `<li>${"The steak is ready! "}</li>`})
 
-//   .catch((errorMsg) => console.log(errorMsg))
+   .catch((errorMsg) => console.log(errorMsg))
 
 // Iteration 3 using async/await
 // Iteration 3 - using async/await
@@ -118,21 +118,21 @@ makeBroccoli();
 
 // Bonus 2 - Promise all
 
-// const instruction1 = new Promise((resolve) => setTimeout(resolve, 500, 'wash brussels sprouts'));
-// const instruction2 = new Promise((resolve) => setTimeout(resolve, 500, 'cut off base and chop in half'));
-// const instruction3 = new Promise((resolve) => setTimeout(resolve, 500, 'toss in bowl with olive oil, balsamic vinegar and salt'));
-// const instruction4 = new Promise((resolve) => setTimeout(resolve, 500, 'preheat oven to 500 F'));
-// const instruction5 = new Promise((resolve) => setTimeout(resolve, 500, 'coat baking sheet with olive oil'));
-// const instruction6 = new Promise((resolve) => setTimeout(resolve, 500, 'roast in the oven for 20 minutes'));
-// const instruction7 = new Promise((resolve) => setTimeout(resolve, 500, 'place back in bowl and add salt and pepper'));
-// const instruction8 = new Promise((resolve) => setTimeout(resolve, 500, 'enjoy'));
+ const instruction1 = new Promise((resolve) => setTimeout(resolve, 500, 'wash brussels sprouts'));
+ const instruction2 = new Promise((resolve) => setTimeout(resolve, 500, 'cut off base and chop in half'));
+ const instruction3 = new Promise((resolve) => setTimeout(resolve, 500, 'toss in bowl with olive oil, balsamic vinegar and salt'));
+ const instruction4 = new Promise((resolve) => setTimeout(resolve, 500, 'preheat oven to 500 F'));
+ const instruction5 = new Promise((resolve) => setTimeout(resolve, 500, 'coat baking sheet with olive oil'));
+ const instruction6 = new Promise((resolve) => setTimeout(resolve, 500, 'roast in the oven for 20 minutes'));
+ const instruction7 = new Promise((resolve) => setTimeout(resolve, 500, 'place back in bowl and add salt and pepper'));
+ const instruction8 = new Promise((resolve) => setTimeout(resolve, 500, 'enjoy'));
 
 
-// Promise.all([instruction1, instruction2, instruction3, instruction4, instruction5, instruction6, instruction7, instruction8])
-//   .then((result) =>{
-//     console.log(result);
-//     document.querySelector("#brusselsSprouts").innerHTML += result.map(item => `<li>${item}</li>`).join('');
-//   })
-//   .catch((error) => {
-//     console.error(error);
-//   });
+ Promise.all([instruction1, instruction2, instruction3, instruction4, instruction5, instruction6, instruction7, instruction8])
+   .then((result) =>{
+     console.log(result);
+     document.querySelector("#brusselsSprouts").innerHTML += result.map(item => `<li>${item}</li>`).join('');
+   })
+   .catch((error) => {
+     console.error(error);
+   });
