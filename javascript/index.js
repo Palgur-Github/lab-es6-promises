@@ -105,21 +105,25 @@ makeBroccoli();
 
 // Bonus 2 - Promise all
 
- const instruction1 = new Promise((resolve) => setTimeout(resolve, 500, 'wash brussels sprouts'));
- const instruction2 = new Promise((resolve) => setTimeout(resolve, 500, 'cut off base and chop in half'));
- const instruction3 = new Promise((resolve) => setTimeout(resolve, 500, 'toss in bowl with olive oil, balsamic vinegar and salt'));
- const instruction4 = new Promise((resolve) => setTimeout(resolve, 500, 'preheat oven to 500 F'));
- const instruction5 = new Promise((resolve) => setTimeout(resolve, 500, 'coat baking sheet with olive oil'));
- const instruction6 = new Promise((resolve) => setTimeout(resolve, 500, 'roast in the oven for 20 minutes'));
- const instruction7 = new Promise((resolve) => setTimeout(resolve, 500, 'place back in bowl and add salt and pepper'));
- const instruction8 = new Promise((resolve) => setTimeout(resolve, 500, 'enjoy'));
+//This is a comment to initialize the work
+//Testing submission and stuff
 
+const instruction1 = new Promise((resolve) => setTimeout(resolve, 500, 'wash brussels sprouts'));
+const instruction2 = new Promise((resolve) => setTimeout(resolve, 500, 'cut off base and chop in half'));
+const instruction3 = new Promise((resolve) => setTimeout(resolve, 500, 'toss in bowl with olive oil, balsamic vinegar and salt'));
+const instruction4 = new Promise((resolve) => setTimeout(resolve, 500, 'preheat oven to 500 F'));
+const instruction5 = new Promise((resolve) => setTimeout(resolve, 500, 'coat baking sheet with olive oil'));
+const instruction6 = new Promise((resolve) => setTimeout(resolve, 500, 'roast in the oven for 20 minutes'));
+const instruction7 = new Promise((resolve) => setTimeout(resolve, 500, 'place back in bowl and add salt and pepper'));
+const instruction8 = new Promise((resolve) => setTimeout(resolve, 500, 'enjoy'));
+const instruction9 = new Promise((resolve) => setTimeout(resolve, 500, 'Brussels sprouts are ready!'));
 
- Promise.all([instruction1, instruction2, instruction3, instruction4, instruction5, instruction6, instruction7, instruction8])
-   .then((result) =>{
-     console.log(result);
-     document.querySelector("#brusselsSprouts").innerHTML += result.map(item => `<li>${item}</li>`).join('');
-   })
-   .catch((error) => {
-     console.error(error);
-   });
+Promise.all([instruction1, instruction2, instruction3, instruction4, instruction5, instruction6, instruction7, instruction8, instruction9])
+  .then((result) =>{
+    console.log(result);
+    document.querySelector("#brusselsSprouts").innerHTML += result.map(item => `<li>${item}</li>`).join('');
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
