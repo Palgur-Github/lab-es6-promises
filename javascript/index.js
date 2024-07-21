@@ -1,7 +1,7 @@
 // Iteration 1 - using callbacks
 
 getInstruction("mashedPotatoes", 0, (step1) => {
-    document.querySelector("#mashedPotatoes").innerHTML += `<li>${step1}</li>;`
+    document.querySelector("#mashedPotatoes").innerHTML += `<li>${step1}</li>`;
   getInstruction("mashedPotatoes", 1, (step2) => {
     document.querySelector("#mashedPotatoes").innerHTML += `<li>${step2}</li>`;
     getInstruction("mashedPotatoes", 2, (step3) => {
