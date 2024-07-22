@@ -51,8 +51,8 @@ getInstruction("mashedPotatoes", 0, (step1) => {
    return obtainInstruction('steak', 7);})
 
   .then( (step7) => {
-   document.querySelector("#steak").innerHTML += `<li>${"The steak is ready! "}</li>`})
-
+   document.querySelector("#steak").innerHTML += `<li>${"The steak is ready! "}</li>`;
+   document.querySelector("#steakImg").removeAttribute("hidden");})
    .catch((errorMsg) => console.log(errorMsg))
 
 // Iteration 3 - using async/await
@@ -119,6 +119,7 @@ Promise.all([instruction1, instruction2, instruction3, instruction4, instruction
   .then((result) =>{
     console.log(result);
     document.querySelector("#brusselsSprouts").innerHTML += result.map(item => `<li>${item}</li>`).join('');
+    document.querySelector("#brusselsSproutsImg").removeAttribute("hidden");
   })
   .catch((error) => {
     console.error(error);
